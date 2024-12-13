@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface PaymentStatusSelectProps {
   value: 'Paid' | 'Unpaid';
   onChange: (status: 'Paid' | 'Unpaid') => void;

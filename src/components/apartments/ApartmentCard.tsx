@@ -1,4 +1,3 @@
-import React from 'react';
 import { Building2, Home, Edit, Phone } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import type { Apartment } from '../../types';

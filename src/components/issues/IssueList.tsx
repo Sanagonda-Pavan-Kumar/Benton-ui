@@ -1,5 +1,4 @@
-import React from 'react';
-import { AlertCircle, Clock, User } from 'lucide-react';
+import { AlertCircle, Clock } from 'lucide-react';
 import { format } from 'date-fns';
 import type { Issue } from '../../types';
 

@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface PaymentDateInputProps {
   id: string;
   label: string;

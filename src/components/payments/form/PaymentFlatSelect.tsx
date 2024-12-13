@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface FlatOption {
   flatId: string;
   tenantId: string;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Plus, DollarSign } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import PaymentList from '../components/payments/PaymentList';

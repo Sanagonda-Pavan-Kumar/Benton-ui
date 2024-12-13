@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Plus, Users } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import TenantList from '../components/tenants/TenantList';

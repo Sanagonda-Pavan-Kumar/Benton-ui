@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Plus } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import ApartmentCard from '../components/apartments/ApartmentCard';

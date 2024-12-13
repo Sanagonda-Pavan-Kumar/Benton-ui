@@ -1,4 +1,3 @@
-import React from 'react';
 import { Home, User, DollarSign } from 'lucide-react';
 import type { Flat } from '../../types';
 

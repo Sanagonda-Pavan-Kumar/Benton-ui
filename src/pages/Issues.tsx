@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Plus, AlertCircle } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import IssueList from '../components/issues/IssueList';

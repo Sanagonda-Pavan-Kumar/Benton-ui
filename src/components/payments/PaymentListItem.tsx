@@ -1,4 +1,3 @@
-import React from 'react';
 import { DollarSign, Calendar, Download } from 'lucide-react';
 import { format } from 'date-fns';
 import type { RentPayment } from '../../types';

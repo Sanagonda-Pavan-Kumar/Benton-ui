@@ -1,4 +1,3 @@
-import React from 'react';
 import type { RentPayment } from '../../types';
 import PaymentListItem from './PaymentListItem';
 

@@ -1,5 +1,4 @@
-import React from 'react';
-import { User, Home, Calendar, Phone } from 'lucide-react';
+import { User, Calendar, Phone } from 'lucide-react';
 import { format } from 'date-fns';
 import type { Tenant } from '../../types';
 

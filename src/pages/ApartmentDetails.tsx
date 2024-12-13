@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ChevronLeft, Plus, Building2 } from 'lucide-react';
 import { useStore } from '../store/useStore';
@@ -41,10 +41,6 @@ export default function ApartmentDetails() {
     setIsModalOpen(false);
   };
 
-  const handleEditFlat = (flat: Flat) => {
-    setSelectedFlat(flat);
-    setIsModalOpen(true);
-  };
 
   const flatsForTable = apartment.flats.map(flat => ({
     number: flat.flatNumber,

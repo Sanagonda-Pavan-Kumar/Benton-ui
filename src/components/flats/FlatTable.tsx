@@ -1,4 +1,3 @@
-import React from 'react';
 import { Home } from 'lucide-react';
 import StatusBadge from '../common/StatusBadge';
 
@@ -44,7 +43,7 @@ export default function FlatTable({ flats }: FlatTableProps) {
                   ${flat.rent}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  <StatusBadge 
+                  <StatusBadge
                     status={flat.status === 'Vacant' ? 'warning' : 'success'}
                   >
                     {flat.status}
