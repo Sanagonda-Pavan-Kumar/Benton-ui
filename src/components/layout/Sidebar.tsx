@@ -57,7 +57,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ className }) => {
           items={[
             {
               icon: <Building2 className="w-4 h-4" />,
-              label: "View All",
+              label: "View All Properties",
               onClick: () => navigate('/properties')
             },
             {

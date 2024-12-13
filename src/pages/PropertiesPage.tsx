@@ -10,7 +10,7 @@ export const PropertiesPage: React.FC = () => {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-3xl font-bold text-gray-800">Properties</h1>
+      <h1 className="text-3xl font-bold text-gray-800">Mackeco Properties</h1>
 
       <StatsSection
         properties={properties}
@@ -18,7 +18,7 @@ export const PropertiesPage: React.FC = () => {
         onFilterChange={setActiveFilter}
       />
 
-      <PropertyTable 
+      <PropertyTable
         data={properties}
         filterStatus={activeFilter}
       />

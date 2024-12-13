@@ -4,10 +4,7 @@ import DataGrid, {
   Column,
   Paging,
   Pager,
-  FilterRow,
-  HeaderFilter,
   Export,
-  Selection,
   SearchPanel
 } from 'devextreme-react/data-grid';
 import { Property, PropertyStatus } from '../../types/property';
@@ -22,7 +19,7 @@ interface PropertyTableProps {
 
 const PropertyTable: React.FC<PropertyTableProps> = ({ data, filterStatus }) => {
   const navigate = useNavigate();
-  
+
   const filteredData = React.useMemo(
     () => data.filter((item) => filterStatus === 'all' || item.status === filterStatus),
     [data, filterStatus]
@@ -43,39 +40,39 @@ const PropertyTable: React.FC<PropertyTableProps> = ({ data, filterStatus }) => 
         onRowClick={onRowClick}
         hoverStateEnabled={true}
       >
-        <SearchPanel visible={true} highlightCaseSensitive={true} />
-        <FilterRow visible={true} />
-        <HeaderFilter visible={true} />
+        <SearchPanel visible={true} width={240} placeholder='Search..' highlightCaseSensitive={true} />
         <Export enabled={true} />
-        <Paging defaultPageSize={10} />
         <Pager
+          visible={true}
           showPageSizeSelector={true}
-          allowedPageSizes={[5, 10, 20]}
+          showNavigationButtons={true}
           showInfo={true}
+          infoText='Page {0} of {1} ({2} Properties)'
         />
+        <Paging defaultPageSize={5} />
 
-        <Column 
-          dataField="id" 
-          caption="ID" 
-          width={70} 
+        <Column
+          dataField="id"
+          caption="ID"
+          width={70}
           alignment="left"
         />
-        <Column 
-          dataField="address" 
-          caption="Name" 
-          alignment="left"
+        <Column
+          dataField="address"
+          caption="Name"
+          alignment="center"
         />
-        <Column 
+        <Column
           dataField="status"
           caption="Status"
           cellRender={StatusCell}
-          alignment="left"
+          alignment="center"
         />
-        <Column 
+        <Column
           dataField="monthlyRent"
           caption="Monthly Rent"
           cellRender={MoneyCell}
-          alignment="right"
+          alignment="center"
         />
       </DataGrid>
     </div>

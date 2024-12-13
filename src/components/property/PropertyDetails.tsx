@@ -8,7 +8,8 @@ import DataGrid, {
   Pager,
   FilterRow,
   HeaderFilter,
-  SearchPanel
+  SearchPanel,
+  ColumnChooser
 } from 'devextreme-react/data-grid';
 import { mockFlats } from '../../data/mockFlats';
 import { ROUTES } from '../../config/constants';
@@ -53,7 +54,7 @@ export const PropertyDetails: React.FC = () => {
         </Button>
         <h2 className="text-2xl font-bold">Property Details - ID: {id}</h2>
       </div>
-      
+
       <div className="bg-white rounded-lg shadow-lg overflow-hidden">
         <DataGrid
           dataSource={mockFlats}
@@ -62,46 +63,47 @@ export const PropertyDetails: React.FC = () => {
           rowAlternationEnabled={true}
           hoverStateEnabled={true}
         >
-          <SearchPanel visible={true} highlightCaseSensitive={true} />
-          <FilterRow visible={true} />
-          <HeaderFilter visible={true} />
-          <Paging defaultPageSize={10} />
+          <SearchPanel visible={true} width={240} placeholder='search...' highlightCaseSensitive={true} />
+          <ColumnChooser enabled={true} />
           <Pager
+            visible={true}
             showPageSizeSelector={true}
-            allowedPageSizes={[5, 10, 20]}
+            showNavigationButtons={true}
             showInfo={true}
+            infoText='Page {0} of {1} ({2} Flats)'
           />
+          <Paging defaultPageSize={5} />
 
-          <Column 
-            dataField="id" 
-            caption="Flat ID" 
+          <Column
+            dataField="id"
+            caption="Room No"
             width={100}
-            alignment="left"
+            alignment="center"
           />
-          <Column 
+          <Column
             dataField="status"
             caption="Status"
             cellRender={StatusCell}
-            alignment="left"
+            alignment="center"
           />
-          <Column 
+          <Column
             dataField="rentAmount"
             caption="Rent Amount"
             cellRender={MoneyCell}
-            alignment="right"
+            alignment="center"
           />
-          <Column 
+          {/* <Column
             dataField="tenant"
             caption="Tenant"
             alignment="left"
             calculateCellValue={(data) => data.tenant || '-'}
-          />
-          <Column
+          /> */}
+          {/* <Column
             caption="Actions"
             cellRender={actionCellRender}
             alignment="center"
             width={150}
-          />
+          /> */}
         </DataGrid>
       </div>
     </div>
