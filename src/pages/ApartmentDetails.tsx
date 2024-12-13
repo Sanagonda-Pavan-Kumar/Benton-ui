@@ -36,7 +36,7 @@ export default function ApartmentDetails() {
       ...flatData,
       id: generateId(),
     };
-    
+
     addFlat(newFlat);
     setIsModalOpen(false);
   };

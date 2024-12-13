@@ -1,37 +1,25 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import Dashboard from './pages/Dashboard';
-import Apartments from './pages/Apartments';
-import ApartmentDetails from './pages/ApartmentDetails';
-import Tenants from './pages/Tenants';
-import Issues from './pages/Issues';
-import Payments from './pages/Payments';
-import Settings from './pages/Settings';
-import { useStore } from './store/useStore';
+import { DashboardLayout } from './components/layout/DashboardLayout';
+import { Dashboard } from './pages/Dashboard';
+import { PropertiesPage } from './pages/PropertiesPage';
+import { AddPropertyForm } from './components/forms/AddPropertyForm';
+import { PropertyDetails } from './components/property/PropertyDetails';
+import { ROUTES } from './config/constants';
 
-function App() {
-  const { initializeDefaultApartments } = useStore();
-
-  useEffect(() => {
-    initializeDefaultApartments();
-  }, [initializeDefaultApartments]);
-
+export const App: React.FC = () => {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Dashboard />} />
-          <Route path="apartments" element={<Apartments />} />
-          <Route path="apartments/:id" element={<ApartmentDetails />} />
-          <Route path="tenants" element={<Tenants />} />
-          <Route path="issues" element={<Issues />} />
-          <Route path="payments" element={<Payments />} />
-          <Route path="settings" element={<Settings />} />
-        </Route>
-      </Routes>
+      <DashboardLayout>
+        <Routes>
+          <Route path={ROUTES.HOME} element={<Dashboard />} />
+          <Route path={ROUTES.PROPERTIES} element={<PropertiesPage />} />
+          <Route path={ROUTES.ADD_PROPERTY} element={<AddPropertyForm />} />
+          <Route path={ROUTES.PROPERTY_DETAILS} element={<PropertyDetails />} />
+        </Routes>
+      </DashboardLayout>
     </Router>
   );
-}
+};
 
 export default App;

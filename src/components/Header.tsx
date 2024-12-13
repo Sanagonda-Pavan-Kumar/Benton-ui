@@ -8,7 +8,7 @@ export default function Header() {
           <div className="flex items-center">
             <Building2 className="h-8 w-8 text-indigo-600" />
             <h1 className="ml-3 text-xl font-semibold text-gray-900">
-              Apartment Manager
+              Mackeco Properties
             </h1>
           </div>
           <div className="flex items-center gap-4">
