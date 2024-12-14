@@ -2,6 +2,15 @@ import React from 'react';
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogFooter,
+} from "../ui/dialog";
+import { Plus } from 'lucide-react';
 import { usePropertyStore } from '../../store/propertyStore';
 import { toast } from 'sonner';
 
@@ -22,7 +31,7 @@ export const AddPropertyForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
+    
     addProperty({
       address: `${formData.propertyName}, ${formData.location}`,
       status: 'vacant',
@@ -62,7 +71,7 @@ export const AddPropertyForm: React.FC = () => {
               required
             />
           </div>
-
+          
           <div className="space-y-2">
             <Label htmlFor="flats">Number of Flats</Label>
             <Input
@@ -75,7 +84,7 @@ export const AddPropertyForm: React.FC = () => {
               required
             />
           </div>
-
+          
           <div className="space-y-2">
             <Label htmlFor="location">Location</Label>
             <Input

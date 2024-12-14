@@ -23,7 +23,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ className }) => {
   return (
     <div
       className={cn(
-        "h-screen fixed left-0 top-0 z-40 flex flex-col transition-all duration-300 bg-white border-r shadow-sm",
+        "h-screen fixed left-0 top-0 z-40 flex flex-col transition-all duration-300 border-r shadow-sm",
         expanded ? "w-64" : "w-16",
         className
       )}
@@ -33,7 +33,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ className }) => {
         setShowPropertySubmenu(false);
       }}
     >
-      <div className="p-4 flex items-center justify-between border-b">
+      <div className="p-4 flex items-center justify-between border-b text-[#fff]">
         <span className={cn("overflow-hidden transition-all", expanded ? "w-32" : "w-0")}>
           PropManager
         </span>
@@ -42,26 +42,26 @@ export const Sidebar: React.FC<SidebarProps> = ({ className }) => {
 
       <nav className="flex-1 flex flex-col gap-2 p-4">
         <SidebarNavItem
-          icon={<LayoutDashboard className="w-5 h-5" />}
+          icon={<LayoutDashboard className="w-8 h-8 text-[#eb6e34]" />}
           label="Dashboard"
           onClick={() => navigate('/')}
           expanded={expanded}
         />
 
         <SidebarSubmenu
-          icon={<Building2 className="w-5 h-5" />}
+          icon={<Building2 className="w-8 h-8 text-[#eb6e34]" />}
           label="Properties"
           expanded={expanded}
           showSubmenu={showPropertySubmenu}
           onToggle={() => expanded && setShowPropertySubmenu(!showPropertySubmenu)}
           items={[
             {
-              icon: <Building2 className="w-4 h-4" />,
-              label: "View All Properties",
+              icon: <Building2 className="w-5 h-5 text-[#eb6e34]" />,
+              label: "View All",
               onClick: () => navigate('/properties')
             },
             {
-              icon: <PlusCircle className="w-4 h-4" />,
+              icon: <PlusCircle className="w-5 h-5 text-[#eb6e34]" />,
               label: "Add Property",
               onClick: () => navigate('/properties/add')
             }

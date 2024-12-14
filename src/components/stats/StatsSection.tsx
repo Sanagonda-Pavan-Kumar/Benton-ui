@@ -26,7 +26,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({
         count={totalCount}
         isActive={activeFilter === 'all'}
         onClick={() => onFilterChange('all')}
-        color="bg-blue-600"
+        color="bg-card"
         icon={<Home size={20} />}
       />
       <StatsCard

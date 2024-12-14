@@ -19,7 +19,7 @@ const StatsCard: React.FC<StatsCardProps> = ({
 }) => {
   return (
     <div
-      className={`${color} px-4 py-3 rounded-lg shadow-md cursor-pointer transform transition-all duration-300 hover:scale-105 ${
+      className={`bg-card px-4 py-3 rounded-lg shadow-md cursor-pointer transform transition-all duration-300 hover:scale-105 ${
         isActive ? 'ring-2 ring-blue-400 scale-105' : ''
       }`}
       onClick={onClick}

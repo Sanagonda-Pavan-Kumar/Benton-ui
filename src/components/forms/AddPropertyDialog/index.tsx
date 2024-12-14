@@ -17,7 +17,7 @@ export const AddPropertyDialog: React.FC<AddPropertyDialogProps> = ({ className 
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className={`bg-purple-600 px-4 py-3 rounded-lg shadow-md cursor-pointer transform transition-all duration-300 hover:scale-105 ${className}`}>
+        <div className={`bg-card px-4 py-3 rounded-lg shadow-md cursor-pointer transform transition-all duration-300 hover:scale-105 ${className}`}>
           <div className="flex items-center justify-between h-full">
             <div>
               <p className="text-white text-xs font-medium mb-1">Add New</p>
