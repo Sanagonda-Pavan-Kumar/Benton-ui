@@ -6,7 +6,7 @@ import { PropertiesPage } from './pages/PropertiesPage';
 import { AddPropertyForm } from './components/forms/AddPropertyForm';
 import { PropertyDetails } from './components/property/PropertyDetails';
 import { ROUTES } from './config/constants';
-import '@fontsource/poppins'; // Defaults to weight 400
+import '@fontsource/poppins';
 
 export const App: React.FC = () => {
   return (

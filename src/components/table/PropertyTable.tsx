@@ -4,8 +4,6 @@ import DataGrid, {
   Column,
   Paging,
   Pager,
-  FilterRow,
-  Export,
   Selection,
   SearchPanel,
   ColumnChooser,

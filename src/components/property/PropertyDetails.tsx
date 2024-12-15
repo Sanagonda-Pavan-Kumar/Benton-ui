@@ -22,6 +22,8 @@ import { MoneyCell } from '../table/cells/MoneyCell';
 import 'devextreme/dist/css/dx.light.css';
 import { usePropertyStore } from '../../store/propertyStore';
 import { TABLE_PAGE_SIZES } from '../../config/constants';
+import { Breadcrumbs } from '../breadCrumbs';
+// import { Breadcrumbs } from '../breadcrumbs';
 
 export const PropertyDetails: React.FC = () => {
   const { id } = useParams();
@@ -29,16 +31,14 @@ export const PropertyDetails: React.FC = () => {
   const dataGridRef = useRef(null);
 
   const [isWindowSizeSmall, setIsWindowSizeSmall] = useState(false);
+  const property = mockFlats.find((data) => data.buildingId === Number(id)) || null;
 
   useEffect(() => {
     const checkWindowSize = () => {
       setIsWindowSizeSmall(window.innerWidth <= 1813);
     };
-
     checkWindowSize();
-
     window.addEventListener('resize', checkWindowSize, { passive: true });
-
     return () => {
       window.removeEventListener('resize', checkWindowSize);
     };
@@ -88,14 +88,17 @@ export const PropertyDetails: React.FC = () => {
   const handleExport = (type, allData = true) => {
     exportData(type, allData);
   };
-  
+
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-4">
-        <h2 className="text-xl text-white font-bold">
-          {properties.find((data) => data.id === Number(id))?.name || 'Property Details'}
-        </h2>
+        <h5 className="text-sm text-white">
+          <Breadcrumbs />
+        </h5>
       </div>
+      <h2 className="text-xl text-white font-bold">
+        {properties.find((data) => data.id === Number(id))?.name || 'Property Details'}
+      </h2>
 
       <div className="bg-card p-6 rounded-lg shadow-lg overflow-hidden">
         <DataGrid
@@ -131,7 +134,7 @@ export const PropertyDetails: React.FC = () => {
               options={{
                 icon: 'exportxlsx',
                 text: 'Export to Excel',
-                onClick: () => handleExport('excel'), // Directly download all data
+                onClick: () => handleExport('excel'),
               }}
             />
             <Item
@@ -141,7 +144,7 @@ export const PropertyDetails: React.FC = () => {
               options={{
                 icon: 'exportpdf',
                 text: 'Export to PDF',
-                onClick: () => handleExport('pdf'), // Directly download all data
+                onClick: () => handleExport('pdf'),
               }}
             />
             <Item name="columnChooserButton" />

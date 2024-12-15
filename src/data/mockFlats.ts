@@ -93,7 +93,7 @@ export const mockFlats: Flat[] = [
   {
     roomNumber: '4',
     rentAmount: 190,
-    status: 'occupied',
+    status: 'vacant',
     buildingId: 1,
   },
   {
@@ -117,7 +117,7 @@ export const mockFlats: Flat[] = [
   {
     roomNumber: '8',
     rentAmount: 175,
-    status: 'occupied',
+    status: 'vacant',
     buildingId: 1,
   },
   {
@@ -155,124 +155,129 @@ export const mockFlats: Flat[] = [
     rentAmount: 225,
     status: 'occupied',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '21',
     rentAmount: 275,
-    status: 'occupied',
+    status: 'vacant',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '22',
     rentAmount: 235,
     status: 'occupied',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '23',
     rentAmount: 275,
     status: 'occupied',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '24',
     rentAmount: 300,
-    status: 'occupied',
+    status: 'vacant',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '25',
     rentAmount: 250,
     status: 'occupied',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '26',
     rentAmount: 230,
     status: 'occupied',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '27',
     rentAmount: 275,
     status: 'occupied',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '28',
     rentAmount: 225,
     status: 'occupied',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '29',
     rentAmount: 250,
     status: 'occupied',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '30',
     rentAmount: 225,
-    status: 'occupied',
+    status: 'vacant',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '31',
     rentAmount: 250,
     status: 'occupied',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '32',
     rentAmount: 250,
     status: 'occupied',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '33',
     rentAmount: 250,
     status: 'occupied',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '34',
     rentAmount: 225,
-    status: 'occupied',
+    status: 'vacant',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '36',
     rentAmount: 275,
     status: 'occupied',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '37',
     rentAmount: 275,
     status: 'occupied',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '38',
     rentAmount: 240,
     status: 'occupied',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '39',
     rentAmount: 250,
     status: 'occupied',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '40',
     rentAmount: 250,
     status: 'occupied',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '41',
     rentAmount: 250,
     status: 'occupied',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '42',
     rentAmount: 300,
-    status: 'occupied',
+    status: 'vacant',
     buildingId: 2,
-  },{
+  }, {
     roomNumber: '43',
     rentAmount: 225,
     status: 'occupied',
     buildingId: 2,
-  },{
+  },
+  {
     roomNumber: '44',
     rentAmount: 300,
     status: 'occupied',
     buildingId: 2,
   },
 
-
-
+  {
+    roomNumber: '47',
+    rentAmount: 320,
+    status: 'vacant',
+    buildingId: 3,
+  },
 
 ];
