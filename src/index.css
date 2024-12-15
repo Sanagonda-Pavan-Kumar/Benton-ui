@@ -126,17 +126,31 @@ body {
 }
 
 /* Header styles */
-.dx-header-row {
-  background-color: #1a171d; /* Header background color */
-  color: #ffffff; /* Header text color */
+.dx-header-row .dx-datagrid-action {
+  background-color: #323946 !important;
+  color: #ffffff;
   font-weight: bold;
-  text-align: left;
+  /* text-align: left; */
   height: 50px;
   border-bottom: 2px solid #303030; /* Divider below header */
 }
 
-.dx-header-row .dx-datagrid-action {
-  color: #ffffff; /* Header action button color */
+.dx-datagrid-content .dx-datagrid-table .dx-row > td,
+.dx-datagrid-content .dx-datagrid-table .dx-row > tr > td {
+  height: 47px !important;
+}
+
+.dx-datagrid-column-chooser
+  .dx-overlay-content
+  .dx-popup-content
+  .dx-column-chooser-item {
+  margin-bottom: 10px;
+  background-color: #323946;
+  color: #7c7c7c;
+  font-weight: 400;
+  border: 1px solid #4d4d4d;
+  padding: 7px;
+  box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.2);
 }
 
 /* Cell styling */
@@ -340,10 +354,23 @@ body {
   background-color: #110f14;
 }
 
-.dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused) > td {
+/* .dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused) > td {
   background-color: none;
   color: #fff;
+} */
+
+.dx-datagrid-rowsview
+  .dx-selection.dx-row:not(.dx-row-focused).dx-row-lines
+  > td {
+  border-bottom-color: none;
 }
+
+.dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused) > td,
+.dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused) > tr > td {
+  background-color: none !important;
+  color: #ffffff;
+}
+
 .dx-data-row:hover {
   background-color: #262626;
   color: #fff !important;
@@ -354,11 +381,27 @@ body {
   border-radius: 10px;
   color: #fff;
   border-color: #fff !important;
+  border: 1px solid #eb6e34 !important;
 }
 
 .dx-button-mode-contained .dx-icon {
-  color: #eb6e34;
+  color: #fff;
 }
+
+.dx-texteditor.dx-state-focused.dx-editor-outlined,
+.dx-texteditor.dx-state-focused.dx-editor-underlined {
+  border-color: #eb6e34;
+}
+
+.dx-datagrid-table
+  .dx-data-row.dx-state-hover:not(.dx-selection):not(.dx-row-inserted):not(
+    .dx-row-removed
+  ):not(.dx-edit-row):not(.dx-row-focused)
+  > td:not(.dx-focused) {
+  background-color: transparent;
+  color: #ffffff;
+}
+
 .dx-button-has-text .dx-icon {
   width: 18px;
   height: 18px;
@@ -366,19 +409,19 @@ body {
   font-weight: lighter;
 }
 
-.dx-show-clear-button .dx-icon-clear{
+.dx-show-clear-button .dx-icon-clear {
   color: #787878;
-    position: absolute;
-    top: 50%;
-    margin-top: -17px;
-    padding: 8px;
-    width: 34px;
-    height: 34px;
-    background-position: 8px 8px;
-    background-size: 18px 18px;
-    font-size: 18px;
-    text-align: center;
-    line-height: 18px;
+  position: absolute;
+  top: 50%;
+  margin-top: -17px;
+  padding: 8px;
+  width: 34px;
+  height: 34px;
+  background-position: 8px 8px;
+  background-size: 18px 18px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 18px;
 }
 
 .dx-button-mode-contained.dx-state-hover {
@@ -428,8 +471,8 @@ body {
   color: #eb6e34;
 }
 
-.dx-texteditor.dx-editor-outlined{
+.dx-texteditor.dx-editor-outlined {
   background: #1a171d;
-    border: 1px solid #4d4d4d;
-    border-radius: 4px;
+  border: 1px solid #4d4d4d;
+  border-radius: 4px;
 }

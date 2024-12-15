@@ -156,12 +156,13 @@ export const PropertyDetails: React.FC = () => {
           <Column
             dataField="roomNumber"
             caption="Room Number"
-            minWidth={100}
+            // minWidth={100}
             alignment="left"
           />
           <Column
             dataField="rentAmount"
             caption="Rent Per Week"
+            minWidth={100}
             cellRender={MoneyCell}
             alignment="left"
           />
