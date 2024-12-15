@@ -7,31 +7,30 @@ interface StatsCardProps {
   onClick: () => void;
   color: string;
   icon: React.ReactNode;
+  countColor: string;
 }
 
 const StatsCard: React.FC<StatsCardProps> = ({
   title,
   count,
   isActive,
+  countColor,
   onClick,
-  color,
   icon,
 }) => {
   return (
     <div
-      className={`bg-card px-4 py-3 rounded-lg shadow-md cursor-pointer transform transition-all duration-300 hover:scale-105 ${
-        isActive ? 'ring-2 ring-blue-400 scale-105' : ''
-      }`}
+      className={`bg-card flex flex-col items-center m-[1px_10px] p-[5px_0] rounded-lg text-white border-none shadow-none transition-all duration-400 ease-in-out cursor-pointer transform hover:scale-105 ${isActive ? 'ring-2 ring-[#eb6e34] scale-105' : ''
+        }`}
+
       onClick={onClick}
     >
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-white text-xs font-medium mb-1">{title}</p>
-          <h3 className="text-white text-2xl font-bold">{count}</h3>
+          <div className="text-xl font-bold mb-2">{title}</div>
+          <div className={`text-xl font-semibold ${countColor}`}>{count}</div>
         </div>
-        <div className="text-white opacity-80">
-          {icon}
-        </div>
+        <div>{icon}</div>
       </div>
     </div>
   );

@@ -4,12 +4,10 @@ import { cn } from '../../lib/utils';
 import {
   LayoutDashboard,
   Building2,
-  ChevronRight,
-  PlusCircle,
-  Menu
-} from 'lucide-react';
+  PlusCircle} from 'lucide-react';
 import { SidebarNavItem } from './sidebar/SidebarNavItem';
 import { SidebarSubmenu } from './sidebar/SidebarSubmenu';
+import { BiLink } from "react-icons/bi";
 
 export interface SidebarProps {
   className?: string;
@@ -23,7 +21,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ className }) => {
   return (
     <div
       className={cn(
-        "h-screen fixed left-0 top-0 z-40 flex flex-col transition-all duration-300 border-r shadow-sm",
+        "h-screen fixed left-0 top-0 z-40 flex flex-col transition-all duration-300  shadow-sm bg-[#3b4755]",
         expanded ? "w-64" : "w-16",
         className
       )}
@@ -33,35 +31,35 @@ export const Sidebar: React.FC<SidebarProps> = ({ className }) => {
         setShowPropertySubmenu(false);
       }}
     >
-      <div className="p-4 flex items-center justify-between border-b text-[#fff]">
+      <div className="p-4 flex items-center justify-between  text-[#fff]">
         <span className={cn("overflow-hidden transition-all", expanded ? "w-32" : "w-0")}>
-          PropManager
+          Mackeco Properties
         </span>
-        <Menu className="w-6 h-6" />
+        <BiLink className="w-10 h-10 text-[#ffc013]" />
       </div>
 
-      <nav className="flex-1 flex flex-col gap-2 p-4">
+      <nav className="flex items-center flex-col gap-2 p-4">
         <SidebarNavItem
-          icon={<LayoutDashboard className="w-8 h-8 text-[#eb6e34]" />}
+          icon={<LayoutDashboard className="w-4 h-4 text-[#eb6e34]" />}
           label="Dashboard"
           onClick={() => navigate('/')}
           expanded={expanded}
         />
 
         <SidebarSubmenu
-          icon={<Building2 className="w-8 h-8 text-[#eb6e34]" />}
+          icon={<Building2 className="w-4 h-4 text-[#eb6e34]" />}
           label="Properties"
           expanded={expanded}
           showSubmenu={showPropertySubmenu}
           onToggle={() => expanded && setShowPropertySubmenu(!showPropertySubmenu)}
           items={[
             {
-              icon: <Building2 className="w-5 h-5 text-[#eb6e34]" />,
-              label: "View All",
+              icon: <Building2 className="w-4 h-4 text-[#eb6e34]" />,
+              label: "View All Properties",
               onClick: () => navigate('/properties')
             },
             {
-              icon: <PlusCircle className="w-5 h-5 text-[#eb6e34]" />,
+              icon: <PlusCircle className="w-4 h-4 text-[#eb6e34]" />,
               label: "Add Property",
               onClick: () => navigate('/properties/add')
             }

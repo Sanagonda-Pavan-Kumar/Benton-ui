@@ -33,7 +33,7 @@ export const PropertyGrid: React.FC<PropertyGridProps> = ({ properties }) => {
         <Paging defaultPageSize={10} />
         <Pager
           showPageSizeSelector={true}
-          allowedPageSizes={[5, 10, 20]}
+          allowedPageSizes={[10, 20, 40, 60, 80]}
           showInfo={true}
         />
 

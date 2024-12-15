@@ -18,12 +18,12 @@ export const SidebarNavItem: React.FC<SidebarNavItemProps> = ({
     <button
       onClick={onClick}
       className={cn(
-        "flex items-center gap-2 p-2 hover:bg-gray-100 rounded-lg transition-all",
+        "flex items-center cursor-pointer gap-2 p-2 hover:text-[#fff] rounded-lg transition-all",
         !expanded && "justify-center"
       )}
     >
       {icon}
-      <span className={cn("overflow-hidden transition-all", expanded ? "w-32" : "w-0")}>
+      <span className={cn("overflow-hidden transition-all text-[#fff] hover:text-[#eb6e34]", expanded ? "w-32" : "w-0")}>
         {label}
       </span>
     </button>

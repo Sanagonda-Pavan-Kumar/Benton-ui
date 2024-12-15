@@ -1,6 +1,8 @@
 export interface Flat {
-  id: number;
-  status: 'occupied' | 'vacant';
+  // id: number;
+  roomNumber:string;
   rentAmount: number;
-  tenant: string | null;
+  status: 'occupied' | 'vacant';
+  buildingId: number;
+  // tenant: string | null;
 }

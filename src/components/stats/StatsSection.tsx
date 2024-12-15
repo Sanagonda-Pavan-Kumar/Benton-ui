@@ -21,13 +21,15 @@ const StatsSection: React.FC<StatsSectionProps> = ({
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+
       <StatsCard
         title="Total Properties"
         count={totalCount}
         isActive={activeFilter === 'all'}
         onClick={() => onFilterChange('all')}
         color="bg-card"
-        icon={<Home size={20} />}
+        icon={<Home size={20} className="text-[#eb6e34] mt-[35px]" />}
+        countColor="text-[#ffc013]"
       />
       <StatsCard
         title="Occupied Properties"
@@ -35,7 +37,8 @@ const StatsSection: React.FC<StatsSectionProps> = ({
         isActive={activeFilter === 'occupied'}
         onClick={() => onFilterChange('occupied')}
         color="bg-green-600"
-        icon={<UserCheck size={20} />}
+        icon={<UserCheck size={20} className="text-[#eb6e34] mt-[35px]" />}
+        countColor="text-[#ffc013]"
       />
       <StatsCard
         title="Vacant Properties"
@@ -43,7 +46,8 @@ const StatsSection: React.FC<StatsSectionProps> = ({
         isActive={activeFilter === 'vacant'}
         onClick={() => onFilterChange('vacant')}
         color="bg-red-600"
-        icon={<UserX size={20} />}
+        icon={<UserX size={20} className="text-[#eb6e34] mt-[35px]" />}
+        countColor="text-[#ffc013]"
       />
       <AddPropertyDialog />
     </div>

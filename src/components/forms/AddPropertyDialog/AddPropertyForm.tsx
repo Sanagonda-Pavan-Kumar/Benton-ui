@@ -66,7 +66,7 @@ export const AddPropertyForm: React.FC = () => {
           name="address"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Property Name</FormLabel>
+              <FormLabel className='text-white'>Property Name</FormLabel>
               <FormControl>
                 <Input placeholder="Enter property name" {...field} />
               </FormControl>
@@ -80,7 +80,7 @@ export const AddPropertyForm: React.FC = () => {
           name="status"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Status</FormLabel>
+              <FormLabel className='text-white'>Status</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
@@ -102,7 +102,7 @@ export const AddPropertyForm: React.FC = () => {
           name="monthlyRent"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Monthly Rent</FormLabel>
+              <FormLabel className='text-white'>Monthly Rent</FormLabel>
               <FormControl>
                 <Input
                   type="number"
@@ -117,9 +117,13 @@ export const AddPropertyForm: React.FC = () => {
 
         <div className="flex justify-end gap-3 pt-4">
           <DialogClose ref={dialogCloseRef} asChild>
-            <Button type="button" variant="outline">Cancel</Button>
+            <Button className='px-7 py-3.5 inline-flex items-center gap-1.5 text-base font-semibold leading-7 text-black border-2 border-white bg-white transition-colors duration-300 ease-in-out rounded-full' type="button" variant="outline">Cancel</Button>
           </DialogClose>
-          <Button type="submit">Add Property</Button>
+          {/* <Button type="submit">Add Property</Button> */}
+          <Button type="submit" className="px-7 py-3.5 inline-flex items-center gap-1.5 text-base font-semibold leading-7 text-white border-2 border-[#0057d6] bg-[#0057d6] transition-colors duration-300 ease-in-out rounded-full">
+            Add Property
+          </Button>
+
         </div>
       </form>
     </Form>

@@ -1,8 +1,9 @@
 export interface Property {
   id: number;
+  name:string;
+  phone:string;
   address: string;
   status: 'occupied' | 'vacant';
-  monthlyRent: number;
 }
 
 export type PropertyStatus = 'all' | 'occupied' | 'vacant';
