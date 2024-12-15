@@ -81,8 +81,8 @@ const PropertyTable: React.FC<PropertyTableProps> = ({ data, filterStatus }) => 
         <Column
           dataField="id"
           caption="ID"
-          width={70}
-          alignment="left"
+          minWidth={70}
+          alignment="center"
         />
         <Column
           dataField="name"

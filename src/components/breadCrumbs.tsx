@@ -14,11 +14,11 @@ export const Breadcrumbs: React.FC = () => {
     const paths = location.pathname.split('/').filter(Boolean);
     const breadcrumbTrail = paths.map((_, index) => {
         const currentPath = `/${paths.slice(0, index + 1).join('/')}`;
-        let label = routeBreadcrumbMap[currentPath] || ''; 
+        let label = routeBreadcrumbMap[currentPath] || '';
         if (currentPath.startsWith('/property/')) {
             label = 'Property Details';
         } else if (currentPath === '/properties') {
-            label = 'Properties'; 
+            label = 'Properties';
         }
 
         return {
@@ -28,7 +28,7 @@ export const Breadcrumbs: React.FC = () => {
     });
 
     return (
-        <nav aria-label="breadcrumb" className="text-sm text-gray-500 mb-4">
+        <nav aria-label="breadcrumb" className="text-sm text-gray-500 mb-4 ">
             <ol className="flex space-x-2">
                 {breadcrumbTrail.map((breadcrumb, index) => (
                     <li key={breadcrumb.path} className="flex items-center">

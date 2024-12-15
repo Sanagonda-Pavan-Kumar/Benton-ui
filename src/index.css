@@ -122,7 +122,7 @@ body {
 }
 
 .dx-datagrid .dx-row:hover {
-  background-color: #1d1a21; /* Hover effect for rows */
+  background-color: #1d1a21;
 }
 
 /* Header styles */
@@ -130,14 +130,14 @@ body {
   background-color: #323946 !important;
   color: #ffffff;
   font-weight: bold;
-  /* text-align: left; */
   height: 50px;
-  border-bottom: 2px solid #303030; /* Divider below header */
+  border-bottom: 2px solid #303030;
 }
 
 .dx-datagrid-content .dx-datagrid-table .dx-row > td,
 .dx-datagrid-content .dx-datagrid-table .dx-row > tr > td {
   height: 47px !important;
+  padding: none !important;
 }
 
 .dx-datagrid-column-chooser
@@ -354,10 +354,6 @@ body {
   background-color: #110f14;
 }
 
-/* .dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused) > td {
-  background-color: none;
-  color: #fff;
-} */
 
 .dx-datagrid-rowsview
   .dx-selection.dx-row:not(.dx-row-focused).dx-row-lines

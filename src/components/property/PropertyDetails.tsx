@@ -159,15 +159,15 @@ export const PropertyDetails: React.FC = () => {
           <Column
             dataField="roomNumber"
             caption="Room Number"
-            // minWidth={100}
-            alignment="left"
+            width={250}
+            alignment="center"
           />
           <Column
             dataField="rentAmount"
             caption="Rent Per Week"
             minWidth={100}
             cellRender={MoneyCell}
-            alignment="left"
+            alignment="center"
           />
           <Column
             dataField="status"

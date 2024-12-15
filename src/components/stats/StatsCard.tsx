@@ -27,7 +27,7 @@ const StatsCard: React.FC<StatsCardProps> = ({
     >
       <div className="flex items-center justify-between">
         <div>
-          <div className="text-xl font-bold mb-2">{title}</div>
+          <div className="text-xl mb-2">{title}</div>
           <div className={`text-xl font-semibold ${countColor}`}>{count}</div>
         </div>
         <div>{icon}</div>
