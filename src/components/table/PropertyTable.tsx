@@ -99,12 +99,12 @@ const PropertyTable: React.FC<PropertyTableProps> = ({ data, filterStatus }) => 
           caption="Address"
           alignment="left"
         />
-        <Column
+        {/* <Column
           dataField="status"
           caption="Status"
           cellRender={StatusCell}
           alignment="left"
-        />
+        /> */}
         {/* <Column 
           dataField="monthlyRent"
           caption="Monthly Rent"
