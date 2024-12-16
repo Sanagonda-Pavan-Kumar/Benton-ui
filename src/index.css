@@ -354,7 +354,6 @@ body {
   background-color: #110f14;
 }
 
-
 .dx-datagrid-rowsview
   .dx-selection.dx-row:not(.dx-row-focused).dx-row-lines
   > td {
@@ -471,4 +470,18 @@ body {
   background: #1a171d;
   border: 1px solid #4d4d4d;
   border-radius: 4px;
+}
+
+.dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused):hover > td,
+.dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused):hover > tr > td,
+.dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused) > td,
+.dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused) > tr > td {
+  background-color: #1c1c1c !important;
+  color: #fff;
+}
+
+.dx-datagrid-rowsview
+  .dx-selection.dx-row:not(.dx-row-focused).dx-row-lines
+  > td {
+  border-bottom-color: #1c1c1c;
 }

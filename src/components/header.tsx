@@ -9,7 +9,6 @@ const Header: React.FC = () => {
     return (
         <header className="bg-gray-800 text-white fixed top-0 w-full shadow-md">
             <div className="container mx-auto flex items-center justify-between p-2">
-                {/* <h1 className="text-2xl font-bold">MyApp</h1> */}
                 <div>
                     {isLoggedIn ? (
                         <button
